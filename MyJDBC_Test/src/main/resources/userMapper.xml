@@ -1,0 +1,17 @@
+<mapper namespace="user">
+    <!--sql的唯一标识：namespace.id组成：取名为statementId-->
+    <!--resultType:查询sql的返回类型对应的映射实体类-->
+    <select id="findAll" resultType="com.bzl.pojo.User">
+        select * from user
+    </select>
+    <!--
+        select * from user where id=? and username=?
+        paramterType:参数类型
+        User user = new User();
+        user.setId(1);
+        user.setUsername("张三")；
+    -->
+    <select id="findByCondition" resultType="com.bzl.pojo.User" paramterType="com.bzl.pojo.User">
+        select * from user where id=#{id} and username=#{username}
+    </select>
+</mapper>

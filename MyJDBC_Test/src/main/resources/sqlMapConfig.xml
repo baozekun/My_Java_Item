@@ -1,0 +1,10 @@
+<configuration>
+    <dataSource>
+        <property name="driver" value="com.mysql.jdbc.Driver"></property>
+        <property name="url" value="jdbc:mysql://mysql_test"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="root"></property>
+    </dataSource>
+    <!-- mapper.xml 配置文件全路径 -->
+    <mapper resource="userMapper.xml"></mapper>
+</configuration>
